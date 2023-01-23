@@ -57,6 +57,7 @@ export const Cart = () => {
         // auth.onAuthStateChanged(user=>{
         //     if(user){
         db.collection("cart").where('uid', '==', uid).onSnapshot(snapshort => {
+            // clear the array before the loop start running to avoid redundancy
             cardProduct = [];
             snapshort.forEach(newCart => {
                 console.log({ ...newCart.data(), ...{ id: newCart.id } })
