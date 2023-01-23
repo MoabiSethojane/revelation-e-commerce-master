@@ -60,6 +60,7 @@ export const Cart = () => {
             // clear the array before the loop start running to avoid redundancy
             cardProduct = [];
             snapshort.forEach(newCart => {
+                // looping through the card data
                 console.log({ ...newCart.data(), ...{ id: newCart.id } })
                 cardProduct.push({ ...newCart.data(), ...{ id: newCart.id } })
             })
